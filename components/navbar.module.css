@@ -1,0 +1,153 @@
+/* Navbar container */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(17, 24, 39, 0.95);
+  border-bottom: 1px solid #374151;
+  backdrop-filter: blur(12px);
+}
+
+/* Inner wrapper */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+/* Flex row */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+/* Logo */
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logoBox {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #f6f03b, #edbd3a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.logoLink:hover .logoBox {
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.25);
+}
+
+.logoText {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.logoOverlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(to right, #f6f03b, #edbd3a);
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.logoLink:hover .logoOverlay {
+  opacity: 1;
+}
+
+.brandName {
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(to right, #f6f03b, #edbd3a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Nav links */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLink {
+  position: relative;
+  padding: 8px 16px;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #ffffff;
+}
+
+.linkContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.linkIcon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Hover backgrounds */
+.linkHover {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.adminHover {
+  background: linear-gradient(
+    to right,
+    rgba(59, 130, 246, 0.1),
+    rgba(139, 92, 246, 0.1)
+  );
+}
+
+.employeeHover {
+  background: linear-gradient(
+    to right,
+    rgba(16, 185, 129, 0.1),
+    rgba(52, 211, 153, 0.1)
+  );
+}
+
+.navLink:hover .linkHover {
+  opacity: 1;
+}

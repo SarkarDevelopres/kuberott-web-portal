@@ -1,0 +1,198 @@
+/* Page layout */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #111827, #1f2933, #111827);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Brand */
+.brand {
+  margin-bottom: 64px;
+}
+
+.logoBox {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(to right, #f6f03b, #edbd3a);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.logoText {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 56px;
+  }
+}
+
+.subtitle {
+  color: #9ca3af;
+  font-size: 18px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+/* Buttons grid */
+.buttonGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .buttonGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Shared button */
+.portalButton {
+  position: relative;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .portalButton {
+    padding: 48px;
+  }
+}
+
+.portalButton:hover {
+  transform: scale(1.05);
+}
+
+/* Admin button */
+.admin {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.admin:hover {
+  box-shadow: 0 25px 50px rgba(59, 130, 246, 0.25);
+}
+
+/* Employee button */
+.employee {
+  background: linear-gradient(135deg, #fadb51, #b6a102);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.employee:hover {
+  box-shadow: 0 25px 50px rgba(139, 92, 246, 0.25);
+}
+
+/* Button content */
+.buttonContent {
+  position: relative;
+  z-index: 2;
+}
+
+.icon {
+  color: #ffffff;
+  font-size: 40px;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .icon {
+    font-size: 48px;
+  }
+}
+
+.portalButton:hover .icon {
+  transform: scale(1.1);
+}
+
+.buttonTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .buttonTitle {
+    font-size: 30px;
+  }
+}
+
+.buttonText {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.adminText {
+  color: #dbeafe;
+}
+
+.employeeText {
+  color: #ede9fe;
+}
+
+/* Hover overlay */
+.hoverOverlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.adminOverlay {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+.employeeOverlay {
+  background: linear-gradient(135deg, #eddb3a, #b6a721);
+}
+
+.portalButton:hover .hoverOverlay {
+  opacity: 1;
+}
+
+/* Footer */
+.footer {
+  margin-top: 64px;
+}
+
+.footerText {
+  color: #6b7280;
+  font-size: 14px;
+}

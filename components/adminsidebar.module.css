@@ -1,0 +1,191 @@
+/* Sidebar container */
+.sidebar {
+  width: 320px;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background: linear-gradient(to bottom, #111827, #1f2933);
+  border-right: 1px solid rgba(55, 65, 81, 0.5);
+  backdrop-filter: blur(12px);
+}
+
+/* Header */
+.header {
+  margin-bottom: 48px;
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.brandIcon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #3b82f6, #7c3aed);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+}
+
+.brandIconText {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.brandTitle {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(to right, #ffffff, #d1d5db);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.brandSubtitle {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* Navigation */
+.nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Links */
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  color: #d1d5db;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: #ffffff;
+  background: linear-gradient(
+    to right,
+    rgba(59, 130, 246, 0.2),
+    rgba(139, 92, 246, 0.2)
+  );
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Active link */
+.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+}
+
+/* Icons */
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #9ca3af;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.link:hover .icon {
+  transform: scale(1.1);
+  color: #60a5fa;
+}
+
+.active .icon {
+  color: #ffffff;
+}
+
+/* Label */
+.label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Active pulse */
+.activeDot {
+  margin-left: auto;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Notification badge */
+.notification {
+  position: absolute;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  background-color: #ef4444;
+  border-radius: 50%;
+}
+
+/* Logout */
+.logout {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(55, 65, 81, 0.5);
+}
+
+.logoutButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  color: #f87171;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoutButton:hover {
+  color: #ffffff;
+  background: linear-gradient(
+    to right,
+    rgba(239, 68, 68, 0.2),
+    rgba(236, 72, 153, 0.2)
+  );
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.logoutIcon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.logoutButton:hover .logoutIcon {
+  transform: scale(1.1);
+}
+
+.logoutLabel {
+  font-size: 18px;
+  font-weight: 600;
+}
