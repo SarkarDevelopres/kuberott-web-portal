@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import styles from "./Navbar.module.css";
+import styles from "./navbar.module.css";
 import { BiCameraMovie } from "react-icons/bi";
 
 function Navbar() {
