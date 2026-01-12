@@ -203,8 +203,11 @@ function AddMovieModal({ closeWindow, showLoading, closeLoading }) {
                         const response = JSON.parse(xhr.responseText);
                         console.log('Upload complete:', response);
                         progressElement.style.display = 'none';
-                        resolve(response); // Resolve with the upload 
-                        window.location.reload();
+
+                        const duration = response.duration; // in seconds
+                        console.log('Video duration:', duration);
+
+                        resolve({ ...response, duration }); // pass it along
                         ;
                     } else {
                         console.error('Upload failed:', xhr.statusText);
@@ -236,6 +239,7 @@ function AddMovieModal({ closeWindow, showLoading, closeLoading }) {
                     movieId: res.movieData._id,
                     imgURL: res.imgUploadCred.fileUrl,
                     videoURL: videoUploadData.secure_url,
+                    duration: videoUploadData.duration,
                     token: "68209781nzinw"
                 }),
             })
